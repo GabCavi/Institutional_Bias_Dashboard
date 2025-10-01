@@ -1,0 +1,1407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Attendance & Sentiment Across Meetings Dashboard</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px;
+      background: #edebee;
+    }
+    svg {
+      margin-top: 0px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .legend rect {
+      width: 20px;
+      height: 20px;
+      stroke: #000000;
+    }
+    .cell:hover {
+      stroke: #000;
+      stroke-width: 1.5px;
+    }
+
+    .cell-faded {
+    opacity: 0.25;
+}
+
+#filterPanel {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+  top: 0;
+  background: #edebee;
+  z-index: 100;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+
+#planTypeControls {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+#planTypeFilters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+#highlightDataset {
+  padding: 6px 8px;
+  font-size: 13px;
+  margin-left: 10px;
+}
+
+button {
+  padding: 6px 12px;
+  font-size: 13px;
+  background: #f0f0f0;
+  border: 1px solid #bbb;
+  cursor: pointer;
+  border-radius: 4px;
+}
+button:hover {
+  background: #e0e0e0;
+}
+
+
+  </style>
+</head>
+<body>
+  <div id="container" style="max-width: 1300px; margin: 0 auto; text-align: center;">
+    <h2 style="margin-bottom: 2px;">Attendance & Sentiment Across Meetings</h2>
+
+</select>
+
+   <div id="filterPanel">
+  <div id="planTypeControls">
+    <strong>Filter by Plan Type:</strong>
+    <div id="planTypeFilters"></div>
+  </div>
+
+<div id="industryControls" style="margin-left: 30px;">
+  <strong>Filter by Industry:</strong>
+  <div id="industryFilters" style="margin-top: 5px; display: flex; flex-wrap: wrap; gap: 10px;"></div>
+</div>
+
+
+
+</div>
+
+
+
+    <div style="overflow-x: auto;">
+      <svg></svg>
+   
+  
+<div id="tooltip" style="
+position: absolute;
+  pointer-events: none;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+  padding: 5px;
+  max-width: 300px;
+  font-size: 7px;
+  line-height: 1.4;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 10;
+"></div>
+
+</body>
+
+
+
+<script>
+
+let currentHighlight = "both";
+let currentEntityType = "both";
+let currentEntitySelection = new Set();  // multi-select set
+
+
+  
+  
+  // ================================
+  // === GLOBAL VARIABLES & CONFIG
+  // ================================
+
+  const fixedPersonOrder = [
+    "Seal", "Teddy Goldstein", "Ed Helpsford",
+    "Carol Limpet", "Simone Kat", "Tante Titan"
+  ];
+
+  let fixedOrgOrder = [];
+  const svg = d3.select("svg");
+  const cellSize = 25;
+  const xOffset = 200;
+  // ================================
+  // === HIGHLIGHT DATASET PRESENCE
+  // ================================ 
+
+function applyHighlightFilter() {
+  const selected = currentHighlight;
+
+  d3.selectAll(".cell")
+    .classed("cell-faded", function () {
+      const ds = d3.select(this).attr("data-dataset");
+      return selected === "both" ? false : (ds !== selected && ds !== "both");
+    });
+
+  d3.selectAll(".sentiment-trend-lines path")
+    .classed("cell-faded", function () {
+      const ds = d3.select(this).attr("data-dataset");
+      return selected === "both" ? false : ds !== selected;
+    });
+}
+
+function applyEntityTypeFilter() {
+  const selected = currentEntityType;
+
+  d3.selectAll(".cell")
+    .classed("cell-faded", function () {
+      const row = d3.select(this.parentNode);
+      const type = row.attr("data-entity-type");
+      return selected === "both" ? false : type !== selected;
+    });
+
+  // Also fade sentiment bars and boxplots
+  d3.selectAll(".boxplot-group")
+    .classed("cell-faded", function () {
+      const type = d3.select(this).attr("data-entity-type");
+      return selected === "both" ? false : type !== selected;
+    });
+
+  d3.selectAll(".missing-bar")
+    .classed("cell-faded", function () {
+      const type = d3.select(this).attr("data-entity-type");
+      return selected === "both" ? false : type !== selected;
+    });
+
+  d3.selectAll(".present-label")
+    .classed("cell-faded", function () {
+      const type = d3.select(this).attr("data-entity-type");
+      return selected === "both" ? false : type !== selected;
+    });
+}
+
+// 🔄 Sync visual stroke with dropdown
+d3.selectAll("rect.dataset-legend")
+  .attr("stroke-width", d => {
+    const label = d3.select(d).text?.() || "";
+    const rect = d3.select(d);
+    const isFILAH = rect.attr("fill") === "#4CAF50";
+    const isTROUT = rect.attr("fill") === "#2196F3";
+    return (selected === "FILAH" && isFILAH) || (selected === "TROUT" && isTROUT) ? 2 : 0;
+});
+
+
+
+
+
+  // ================================
+  // === DRAW FUNCTION (MAIN VISUALS)
+  // ================================
+  function draw(data) {
+const selectedTypes = Array.from(document.querySelectorAll(".plan-type-checkbox:checked"))
+  .map(input => input.value === "null" ? null : input.value);
+const persons = fixedPersonOrder;
+
+const tooltip = d3.select("#tooltip");
+
+
+
+
+if (fixedOrgOrder.length === 0) {
+  fixedOrgOrder = Array.from(
+    new Set(data.filter(d => d.entity_type === "organization").map(d => d.entity_id))
+  ).sort();
+}
+const orgs = fixedOrgOrder;
+
+const entities = [...persons, ...orgs];
+const filtered = data.filter(d =>
+  (d.entity_type === "person" || d.entity_type === "organization") &&
+  selectedTypes.includes(d.plan_type)
+);
+
+   // const entityType = d3.select("#entityTypeDropdown").node().value;
+console.log("📊 draw() called with data length:", data.length);
+console.log("👥 Drawing entities:", entities);
+
+
+
+    // === GROUP SENTIMENTS FOR BOX PLOT ===
+    const sentimentGroups = d3.rollups(
+       data.filter(d => d.sentiment !== null),
+        v => v.map(d => d.sentiment),
+        d => d.entity_id
+        );
+        
+
+
+d3.select("#highlightDataset").on("change", applyHighlightFilter);
+
+
+// For presence matrix, only use entries with plan_type === null
+const presenceData = data.filter(d =>
+  (d.entity_type === "person" || d.entity_type === "organization") &&
+  d.sentiment !== null &&
+  d.present === 1
+);
+
+
+
+
+
+    // === SELECT ENTITIES TO DISPLAY ===
+
+
+
+
+
+    // === MEETING LIST ===
+    const meetings = [...Array(16)].map((_, i) => `Meeting_${i + 1}`);
+
+    // === CLEAR SVG AND SET DIMENSIONS ===
+    svg.selectAll("*").remove();
+    svg.attr("height", entities.length * cellSize + 250)
+       .attr("width", meetings.length * cellSize + xOffset + 250);
+
+    // ================================
+    // === DATA AGGREGATION
+    // ================================
+
+    // === MISSING COUNTS ===
+    const missingCountMap = Object.fromEntries(
+      entities.map(entity => {
+        const count = meetings.reduce((acc, meeting) => {
+          const present = filtered.find(d =>
+            d.entity_id === entity && d.meeting_id === meeting && d.present === 1
+          );
+          return acc + (present ? 0 : 1);
+        }, 0);
+        return [entity, count];
+      })  
+    );
+
+
+
+
+ drawSentimentBars(filtered);  // use the filtered data
+ applyEntityTypeFilter();
+
+
+
+    // ================================
+    // === HEATMAP: PRESENCE MATRIX
+    // ================================
+// === BUILD PRESENCE MAP BY ENTITY-MEETING-DATASET ===
+// === Use only plan_type === null to avoid duplicates ===
+
+
+// === BUILD PRESENCE MAP BY ENTITY-MEETING-DATASET ===
+const presenceMap = {};
+
+presenceData.forEach(d => {
+  const key = `${d.entity_id}-${d.meeting_id}`;
+  if (!(key in presenceMap)) {
+    presenceMap[key] = { FILAH: 0, TROUT: 0, JOURNALIST: 0 };
+  }
+  presenceMap[key][d.dataset] = d.present;
+
+  
+});
+
+
+// === DRAW CUSTOM HEATMAP ===
+const heatmapGroup = svg
+    .append("g")
+    .attr("class", "heatmap");
+
+entities.forEach((entity, y) => {
+  meetings.forEach((meeting, x) => {
+    const key = `${entity}-${meeting}`;
+    const status = presenceMap[key] || { FILAH: 0, TROUT: 0 };
+    const cx = x * cellSize + xOffset;
+    const cy = y * cellSize + 95;
+
+    const isFilah = status.FILAH === 1;
+    const isTrout = status.TROUT === 1;
+    const isJourno = status.JOURNALIST === 1;
+
+// Add a large transparent hover area to help with small shapes like circles
+heatmapGroup.append("rect")
+  .attr("x", cx)
+  .attr("y", cy)
+  .attr("width", cellSize)
+  .attr("height", cellSize)
+  .attr("fill", "transparent")
+  .style("pointer-events", "all") // ensure it's hoverable
+  .on("mouseover", (event) => {
+    const priority = ["JOURNALIST", "TROUT", "FILAH"];
+    const dataset = priority.find(ds => status[ds]);
+
+    if (!dataset) return;
+
+    const entry = presenceData.find(d =>
+      d.entity_id === entity &&
+      d.meeting_id === meeting &&
+      d.dataset === dataset
+    );
+
+    const { title, reason } = getTitleAndReason(dataset);
+    if (title || reason) {
+      tooltip
+        .html(`<strong>${dataset}</strong><br>${title || ''}${reason ? `<br><em>Reason:</em> ${reason}` : ''}`)
+        .style("left", `${event.pageX + 12}px`)
+        .style("top", `${event.pageY - 30}px`)
+        .style("opacity", 0.95);
+    }
+
+    if (entry?.sentiment != null) {
+      svg.append("text")
+        .attr("class", "hover-sentiment-label")
+        .attr("x", cx)
+        .attr("y", cy + cellSize - 6)
+        .attr("font-size", "12px")
+        .attr("font-weight", "bold")
+        .attr("stroke", "#000")
+        .attr("stroke-width", 0.5)
+        .attr("fill", "yellow")
+        .text(entry.sentiment.toFixed(2));
+    }
+  })
+  .on("mouseout", () => {
+    tooltip.style("opacity", 0);
+    svg.selectAll(".hover-sentiment-label").remove();
+  });
+
+
+const getTitleAndReason = (dataset) => {
+  const entry = presenceData.find(d =>
+    d.entity_id === entity &&
+    d.meeting_id === meeting &&
+    d.present === 1 &&
+    d.dataset === dataset
+  );
+  return {
+    title: entry?.long_title || null,
+    reason: entry?.reason || null
+  };
+};
+
+
+    if (isFilah && isTrout) {
+      // Background box
+      heatmapGroup.append("rect")
+        .attr("x", cx)
+        .attr("y", cy)
+        .attr("width", cellSize)
+        .attr("height", cellSize)
+        .attr("fill", "#ffffff")
+        .attr("stroke", "#ddd")
+        .attr("stroke-width", 1.5);
+
+// Bottom-left triangle (FILAH)
+heatmapGroup.append("path")
+  .attr("d", `M ${cx},${cy + cellSize} L ${cx},${cy} L ${cx + cellSize},${cy + cellSize} Z`)
+  .attr("fill", "#4CAF50")
+  .attr("class", "cell")
+  .attr("data-dataset", "FILAH")
+.on("mouseover", (event) => {
+  const { title, reason } = getTitleAndReason("FILAH");
+  if (title || reason) {
+    tooltip
+      .html(`<strong>FILAH</strong><br>${title || ''}${reason ? `<br><em>Reason:</em> ${reason}` : ''}`)
+      .style("left", `${event.pageX + 12}px`)
+      .style("top", `${event.pageY - 30}px`)
+      .style("opacity", 0.95);
+  }
+
+  const entry = presenceData.find(d =>
+    d.entity_id === entity && d.meeting_id === meeting && d.dataset === "FILAH"
+  );
+  if (entry?.sentiment != null) {
+svg.append("text")
+  .attr("class", "hover-sentiment-label")
+  .attr("x", cx )
+  .attr("y", cy + cellSize - 6)
+  .attr("font-size", "12px")               // increase font size
+  .attr("font-weight", "bold")             // make it bold
+  .attr("stroke", "#000")                  // add stroke for contrast
+  .attr("stroke-width", 0.5)
+  .attr("fill", "yellow")                 // change color (e.g., orange/red)
+  .text(entry.sentiment.toFixed(2));
+
+  }
+})
+.on("mouseout", () => {
+  tooltip.style("opacity", 0);
+  svg.selectAll(".hover-sentiment-label").remove();
+});
+
+
+// Top-right triangle (TROUT)
+heatmapGroup.append("path")
+  .attr("d", `M ${cx + cellSize},${cy} L ${cx + cellSize},${cy + cellSize} L ${cx},${cy} Z`)
+  .attr("fill", "#2196F3")
+  .attr("class", "cell")
+  .attr("data-dataset", "TROUT")
+ .on("mouseover", (event) => {
+  const { title, reason } = getTitleAndReason("TROUT");
+  if (title || reason) {
+    tooltip
+      .html(`<strong>TROUT</strong><br>${title || ''}${reason ? `<br><em>Reason:</em> ${reason}` : ''}`)
+      .style("left", `${event.pageX + 12}px`)
+      .style("top", `${event.pageY - 30}px`)
+      .style("opacity", 0.95);
+  }
+
+  const entry = presenceData.find(d =>
+    d.entity_id === entity && d.meeting_id === meeting && d.dataset === "TROUT"
+  );
+  if (entry?.sentiment != null) {
+svg.append("text")
+  .attr("class", "hover-sentiment-label")
+  .attr("x", cx)
+  .attr("y", cy + cellSize - 6)
+  .attr("font-size", "12px")               // increase font size
+  .attr("font-weight", "bold")             // make it bold
+  .attr("stroke", "#000")                  // add stroke for contrast
+  .attr("stroke-width", 0.5)
+  .attr("fill", "yellow")                 // change color (e.g., orange/red)
+  .text(entry.sentiment.toFixed(2));
+  }
+})
+.on("mouseout", () => {
+  tooltip.style("opacity", 0);
+  svg.selectAll(".hover-sentiment-label").remove();
+});
+
+
+
+      // Diagonal
+      heatmapGroup.append("path")
+        .attr("d", `M ${cx},${cy + cellSize} L ${cx + cellSize},${cy}`)
+        .attr("stroke-width", 2)
+        .attr("class", "cell")
+        .attr("data-dataset", "both");
+} else if (isFilah) {
+  heatmapGroup.append("rect")
+    .attr("x", cx)
+    .attr("y", cy)
+    .attr("width", cellSize)
+    .attr("height", cellSize)
+    .attr("fill", "#4CAF50")
+    .attr("stroke", "#ddd")
+    .attr("stroke-width", 1)
+    .attr("class", "cell")
+    .attr("data-dataset", "FILAH")
+    .on("mouseover", (event) => {
+      const { title, reason } = getTitleAndReason("FILAH");
+      if (title || reason) {
+        tooltip
+          .html(`<strong>FILAH</strong><br>${title || ''}${reason ? `<br><em>Reason:</em> ${reason}` : ''}`)
+          .style("left", `${event.pageX + 12}px`)
+          .style("top", `${event.pageY - 30}px`)
+          .style("opacity", 0.95);
+      }
+
+      const entry = presenceData.find(d =>
+        d.entity_id === entity && d.meeting_id === meeting && d.dataset === "FILAH"
+      );
+      if (entry?.sentiment != null) {
+svg.append("text")
+  .attr("class", "hover-sentiment-label")
+  .attr("x", cx )
+  .attr("y", cy + cellSize - 8)
+  .attr("font-size", "12px")               // increase font size
+  .attr("font-weight", "bold")             // make it bold
+  .attr("stroke", "#000")                  // add stroke for contrast
+  .attr("stroke-width", 0.5)
+  .attr("fill", "yellow")                 // change color (e.g., orange/red)
+  .text(entry.sentiment.toFixed(2));
+      }
+    })
+    .on("mousemove", (event) => {
+      tooltip
+        .style("left", `${event.pageX + 12}px`)
+        .style("top", `${event.pageY - 30}px`);
+    })
+    .on("mouseout", () => {
+      tooltip.style("opacity", 0);
+      svg.selectAll(".hover-sentiment-label").remove();
+    });
+
+    } else if (isTrout) {
+      heatmapGroup.append("rect")
+        .attr("x", cx)
+        .attr("y", cy)
+        .attr("width", cellSize)
+        .attr("height", cellSize)
+        .attr("fill", "#2196F3")
+        .attr("stroke", "#ddd")
+        .attr("stroke-width", 1)
+        .attr("class", "cell")
+        .attr("data-dataset", "TROUT")
+.on("mouseover", (event) => {
+  const { title, reason } = getTitleAndReason("TROUT");
+  if (title || reason) {
+    tooltip
+      .html(`<strong>TROUT</strong><br>${title || ''}${reason ? `<br><em>Reason:</em> ${reason}` : ''}`)
+      .style("left", `${event.pageX + 12}px`)
+      .style("top", `${event.pageY - 30}px`)
+      .style("opacity", 0.95);
+  }
+
+  const entry = presenceData.find(d =>
+    d.entity_id === entity && d.meeting_id === meeting && d.dataset === "TROUT"
+  );
+  if (entry?.sentiment != null) {
+svg.append("text")
+  .attr("class", "hover-sentiment-label")
+  .attr("x", cx )
+  .attr("y", cy + cellSize - 8)
+  .attr("font-size", "12px")               // increase font size
+  .attr("font-weight", "bold")             // make it bold
+  .attr("stroke", "#000")                  // add stroke for contrast
+  .attr("stroke-width", 0.5)
+  .attr("fill", "yellow")                 // change color (e.g., orange/red)
+  .text(entry.sentiment.toFixed(2));
+  }
+})
+.on("mousemove", (event) => {
+  tooltip
+    .style("left", `${event.pageX + 12}px`)
+    .style("top", `${event.pageY - 30}px`);
+})
+.on("mouseout", () => {
+  tooltip.style("opacity", 0);
+  svg.selectAll(".hover-sentiment-label").remove();
+});
+
+
+
+ 
+    } else {
+      heatmapGroup.append("rect")
+        .attr("x", cx)
+        .attr("y", cy)
+        .attr("width", cellSize)
+        .attr("height", cellSize)
+        .attr("fill", "#ffffff")
+        .attr("stroke", "#ddd")
+        .attr("stroke-width", 1)
+        .attr("class", "cell")
+        .attr("data-dataset", "none");
+    }
+
+    if (isJourno) {
+  heatmapGroup.append("circle")
+    .attr("cx", cx + cellSize / 2)
+    .attr("cy", cy + cellSize / 2)
+    .attr("r", 4)
+    .attr("fill", "purple") // black circle for JOURNALIST
+    .attr("class", "cell")
+    .attr("data-dataset", "JOURNALIST")
+    .on("mouseover", (event) => {
+      const { title, reason } = getTitleAndReason("JOURNALIST");
+      if (title || reason) {
+        tooltip
+          .html(`<strong>JOURNALIST</strong><br>${title || ''}${reason ? `<br><em>Reason:</em> ${reason}` : ''}`)
+          .style("left", `${event.pageX + 12}px`)
+          .style("top", `${event.pageY - 30}px`)
+          .style("opacity", 0.95);
+      }
+
+      const entry = presenceData.find(d =>
+        d.entity_id === entity && d.meeting_id === meeting && d.dataset === "JOURNALIST"
+      );
+
+
+      if (entry?.sentiment != null) {
+svg.append("text")
+  .attr("class", "hover-sentiment-label")
+  .attr("x", cx )
+  .attr("y", cy + cellSize - 8)
+  .attr("font-size", "12px")               // increase font size
+  .attr("font-weight", "bold")             // make it bold
+  .attr("stroke", "#000")                  // add stroke for contrast
+  .attr("stroke-width", 0.5)
+  .attr("fill", "yellow")                 // change color (e.g., orange/red)
+  .text(entry.sentiment.toFixed(2));
+      }
+    })
+    .on("mouseout", () => {
+      tooltip.style("opacity", 0);
+      svg.selectAll(".hover-sentiment-label").remove();
+    });
+  }
+  // Add a bigger invisible hit circle for easier hover
+heatmapGroup.append("circle")
+  .attr("cx", cx + cellSize / 2)
+  .attr("cy", cy + cellSize / 2)
+  .attr("r", 10) // larger area for hover
+  .attr("fill", "transparent")
+  .style("pointer-events", "visible") // allow hover even though it's transparent
+  .on("mouseover", (event) => {
+    const { title, reason } = getTitleAndReason("JOURNALIST");
+    if (title || reason) {
+      tooltip
+        .html(`<strong>JOURNALIST</strong><br>${title || ''}${reason ? `<br><em>Reason:</em> ${reason}` : ''}`)
+        .style("left", `${event.pageX + 12}px`)
+        .style("top", `${event.pageY - 30}px`)
+        .style("opacity", 0.95);
+    }
+
+    const entry = presenceData.find(d =>
+      d.entity_id === entity && d.meeting_id === meeting && d.dataset === "JOURNALIST"
+    );
+    if (entry?.sentiment != null) {
+      svg.append("text")
+        .attr("class", "hover-sentiment-label")
+        .attr("x", cx)
+        .attr("y", cy + cellSize - 8)
+        .attr("font-size", "12px")
+        .attr("font-weight", "bold")
+        .attr("stroke", "#000")
+        .attr("stroke-width", 0.5)
+        .attr("fill", "yellow")
+        .text(entry.sentiment.toFixed(2));
+    }
+  })
+  .on("mouseout", () => {
+    tooltip.style("opacity", 0);
+    svg.selectAll(".hover-sentiment-label").remove();
+  });
+
+
+});
+
+  
+
+});
+
+
+// === ENTITY LABELS ON LEFT ===
+const labelGroup = svg.append("g").attr("class", "entity-labels");
+
+const labelWidth = 180;
+const badgeSize = 10;
+const labelHeight = cellSize - 6; // box height
+const padding = 6;
+
+entities.forEach((entity, i) => {
+  const cy = i * cellSize + 95 + cellSize / 2;
+  const isPerson = fixedPersonOrder.includes(entity);
+  const color = isPerson ? "#fb8c00" : "#e53935";
+  const groupType = isPerson ? "person" : "organization";
+
+  const group = labelGroup.append("g")
+    .attr("class", "entity-label-group")
+    .attr("data-entity-type", groupType)
+    .attr("transform", `translate(${xOffset - 7}, ${cy})`);
+
+  // Background box (centered vertically)
+  group.append("rect")
+    .attr("x", -labelWidth)
+    .attr("y", -labelHeight / 2)
+    .attr("width", labelWidth)
+    .attr("height", labelHeight)
+    .attr("rx", 6)
+    .attr("ry", 6)
+    .attr("fill", "#f3f3f3")
+    .attr("stroke", "#ccc")
+    .attr("stroke-width", 1);
+
+  // Entity name text (centered)
+  group.append("text")
+    .attr("x", -badgeSize - 10)
+    .attr("y", 4) // fine-tuned to pixel center
+    .attr("text-anchor", "end")
+    .attr("font-size", "12px")
+    .attr("fill", color)
+    .text(entity);
+
+  // Badge (right-aligned)
+  group.append("rect")
+    .attr("x", -badgeSize - 4)
+    .attr("y", -badgeSize / 2)
+    .attr("width", badgeSize)
+    .attr("height", badgeSize)
+    .attr("rx", 2)
+    .attr("ry", 2)
+    .attr("fill", color);
+});
+
+
+
+
+
+    // ================================
+    // === MISSINGNESS BAR CHART (RIGHT SIDE)
+    // ================================
+
+
+// ================================ HIGHLIGHT DATASET PRESENCE
+  const entityDatasetMap = {};
+
+presenceData.forEach(d => {
+  const entity = d.entity_id;
+  if (!entityDatasetMap[entity]) {
+    entityDatasetMap[entity] = new Set();
+  }
+  entityDatasetMap[entity].add(d.dataset);
+});
+
+    const presentCountMap = {};
+  entities.forEach(d => {
+  presentCountMap[d] = meetings.length - missingCountMap[d];
+});
+    
+    const maxMissing = d3.max(Object.values(presentCountMap));
+    const missingScale = d3.scaleLinear().domain([0, maxMissing]).range([0, 80]);
+
+svg.selectAll("rect.missing-bar")
+  .data(entities)
+  .enter()
+  .append("rect")
+  .attr("class", "missing-bar cell") // Add 'cell' for highlighting
+  .attr("x", d => meetings.length * cellSize + xOffset + 10)
+  .attr("y", (_, i) => i * cellSize + 95)
+  .attr("width", d => missingScale(presentCountMap[d]))
+  .attr("height", cellSize - 4)
+  .attr("fill", "#333")
+  .attr("data-dataset", d => {
+    const ds = Array.from(entityDatasetMap[d] || []);
+    return ds.includes("FILAH") && ds.includes("TROUT") ? "both" : ds[0] || "none";
+  })
+  .append("title")
+  .text(d => `Present: ${presentCountMap[d]} of ${meetings.length}`);
+
+
+svg.selectAll("text.present-label")
+  .data(entities)
+  .enter()
+  .append("text")
+  .attr("class", "present-label")
+  .attr("x", d => {
+    const barX = meetings.length * cellSize + xOffset + 10;
+    const barWidth = missingScale(presentCountMap[d]);
+    return presentCountMap[d] > 3
+      ? barX + 4                     // slightly inside the bar
+      : barX + barWidth + 3;        // outside the bar
+  })
+  .attr("y", (_, i) => i * cellSize + 95 + cellSize / 2)
+  .attr("fill", d => presentCountMap[d] > 3 ? "white" : "#222")
+  .attr("font-size", "11px")
+  .attr("text-anchor", d => presentCountMap[d] > 3 ? "start" : "start")
+  .attr("alignment-baseline", "middle")
+  .text(d => `${presentCountMap[d]}/${meetings.length}`);
+
+
+// Convert Set to string label
+const entityDatasetLabel = {};
+Object.entries(entityDatasetMap).forEach(([entity, datasetSet]) => {
+  if (datasetSet.has("FILAH") && datasetSet.has("TROUT")) {
+    entityDatasetLabel[entity] = "both";
+  } else if (datasetSet.has("FILAH")) {
+    entityDatasetLabel[entity] = "FILAH";
+  } else if (datasetSet.has("TROUT")) {
+    entityDatasetLabel[entity] = "TROUT";
+  } else {
+    entityDatasetLabel[entity] = "none";
+  }
+});
+
+
+// ================================
+// === SENTIMENT BOXPLOTS (RIGHT OF MISSINGNESS BARS)
+// ================================
+const sentimentStats = {};
+entities.forEach(entity => {
+  const values = filtered
+    .filter(d => d.entity_id === entity && d.present === 1 && d.sentiment !== null)
+    .map(d => +d.sentiment)
+    .sort(d3.ascending);
+
+  if (values.length >= 1) {
+    sentimentStats[entity] = {
+      min: d3.min(values),
+      q1: d3.quantile(values, 0.25),
+      median: d3.quantile(values, 0.5),
+      q3: d3.quantile(values, 0.75),
+      max: d3.max(values)
+    };
+  }
+});
+
+const boxXStart = meetings.length * cellSize + xOffset + 110;
+const boxWidth = 100;
+const sentimentX = d3.scaleLinear()
+  .domain([-1, 1])
+  .range([0, boxWidth]);
+
+    // ================================
+// === SENTIMENT VERTICAL GUIDE LINES
+// ================================
+const guideLineGroup = svg.append("g").attr("class", "sentiment-guides");
+
+[-1, 0, 1].forEach(val => {
+  guideLineGroup.append("line")
+    .attr("x1", sentimentX(val) + boxXStart)
+    .attr("x2", sentimentX(val) + boxXStart)
+    .attr("y1", 90)
+    .attr("y2", entities.length * cellSize + 95)
+    .attr("stroke", "#aaa")
+    .attr("stroke-dasharray", "4,2");
+  
+  // Optional: label each line
+  guideLineGroup.append("text")
+    .attr("x", sentimentX(val) + boxXStart)
+    .attr("y", entities.length * cellSize + 105)  // or +115 or +120
+    .attr("text-anchor", "middle")
+    .attr("font-size", "10px")
+    .attr("fill", "#666")
+    .text(val);
+});
+
+const boxGroup = svg.append("g").attr("class", "boxplot-group");
+
+entities.forEach((entity, i) => {
+  const stats = sentimentStats[entity];
+  if (!stats) return;
+
+  const y = i * cellSize + 95 + cellSize / 2;
+
+const g = boxGroup.append("g")
+  .attr("transform", `translate(${boxXStart}, ${y})`)
+  .attr("class", "boxplot-group cell")
+  .attr("data-entity-type", fixedPersonOrder.includes(entity) ? "person" : "organization")
+  .attr("data-dataset", () => {
+    const ds = Array.from(entityDatasetMap[entity] || []);
+    return ds.includes("FILAH") && ds.includes("TROUT") ? "both" : ds[0] || "none";
+  });
+
+
+  g.append("line")
+    .attr("x1", sentimentX(stats.min))
+    .attr("x2", sentimentX(stats.max))
+    .attr("y1", 0)
+    .attr("y2", 0)
+    .attr("stroke", "black");
+
+// Vertical cap lines (min and max)
+const capHeight = 10; // height of the cap in pixels
+
+// Min cap
+g.append("line")
+  .attr("x1", sentimentX(stats.min))
+  .attr("x2", sentimentX(stats.min))
+  .attr("y1", -capHeight / 2)
+  .attr("y2", capHeight / 2)
+  .attr("stroke", "#333")
+  .attr("stroke-width", 1.5);
+
+// Max cap
+g.append("line")
+  .attr("x1", sentimentX(stats.max))
+  .attr("x2", sentimentX(stats.max))
+  .attr("y1", -capHeight / 2)
+  .attr("y2", capHeight / 2)
+  .attr("stroke", "#333")
+  .attr("stroke-width", 1.5);
+
+
+
+  g.append("rect")
+    .attr("x", sentimentX(stats.q1))
+    .attr("y", -cellSize / 4)
+    .attr("width", sentimentX(stats.q3) - sentimentX(stats.q1))
+    .attr("height", cellSize / 2)
+    .attr("fill", "#333")
+    .attr("stroke", "black")
+    .attr("stroke-width", 1.3);
+
+// Outline for the median line (slightly thicker, drawn first)
+g.append("line")
+  .attr("x1", sentimentX(stats.median))
+  .attr("x2", sentimentX(stats.median))
+  .attr("y1", -cellSize / 4)
+  .attr("y2", cellSize / 4)
+  .attr("stroke", "black")
+  .attr("stroke-width", 2.5);
+
+// Actual median line (drawn on top of the outline)
+g.append("line")
+  .attr("x1", sentimentX(stats.median))
+  .attr("x2", sentimentX(stats.median))
+  .attr("y1", -cellSize / 4)
+  .attr("y2", cellSize / 4)
+  .attr("stroke", "yellow")  // or "#FFC107" if you're going for amber
+  .attr("stroke-width", 1.8);
+
+
+
+  g.append("title").text(
+    `Min: ${stats.min.toFixed(2)}\nQ1: ${stats.q1.toFixed(2)}\nMedian: ${stats.median.toFixed(2)}\nQ3: ${stats.q3.toFixed(2)}\nMax: ${stats.max.toFixed(2)}`
+  );
+});
+
+    // ================================
+    // === MEETING LABELS (BOTTOM)
+    // ================================
+
+    svg.selectAll("text.meeting")
+      .data(meetings)
+      .enter()
+      .append("text")
+      .attr("x", (_, i) => i * cellSize -5 +xOffset + cellSize / 2)
+      .attr("y", entities.length * cellSize + 140)
+      .attr("text-anchor", "start")
+      .attr("font-size", "13px")
+      .attr("transform", (_, i) =>
+        `rotate(-45, ${i * cellSize + xOffset + cellSize / 2}, ${entities.length * cellSize + 190})`)
+      .text(d => d);
+
+    // ================================
+    // === LEGEND (TOP RIGHT)
+    // ================================
+    
+
+const legend = svg.append("g")
+  .attr("class", "legend")
+  .attr("transform", `translate(${xOffset + meetings.length * cellSize + 40}, 35)`);
+
+// Config
+const boxSize = 15;
+const rowHeight = 22;
+const colSpacing = 50;  // space between columns
+
+// Section headers
+legend.append("text")
+  .attr("x", -25)
+  .attr("y", -25)
+  .attr("font-size", "13px")
+  .attr("font-weight", "bold")
+  .text("Dataset");
+
+legend.append("text")
+  .attr("x", colSpacing +40)
+  .attr("y", -15)
+  .attr("font-size", "13px")
+  .attr("font-weight", "bold")
+  .text("Entity Type");
+
+// Legend items
+const leftColumn = [
+  { label: "FILAH", color: "#4CAF50" },
+  { label: "TROUT", color: "#2196F3" },
+  { label: "JOURNALIST", color: "purple" }
+];
+
+const rightColumn = [
+  { label: "Person", color: "#fb8c00" },
+  { label: "Organization", color: "#e53935" }
+];
+
+leftColumn.forEach((item, i) => {
+  legend.append("rect")
+    .attr("class", "dataset-legend")
+    .attr("x", -25)
+    .attr("y", (i + 1) * rowHeight - boxSize-25)
+    .attr("width", boxSize)
+    .attr("height", boxSize)
+    .attr("fill", item.color)
+    .attr("stroke", "#000")
+    .attr("stroke-width", 0)
+    .style("cursor", "pointer")
+    .on("click", function () {
+  const label = item.label;
+
+  if (currentHighlight === label) {
+    currentHighlight = "both"; // deselect if already active
+    d3.selectAll("rect.dataset-legend").attr("stroke-width", 0);
+  } else {
+    currentHighlight = label;
+    d3.selectAll("rect.dataset-legend").attr("stroke-width", 0);
+    d3.select(this).attr("stroke-width", 2);
+  }
+
+  applyHighlightFilter();
+});
+
+
+  legend.append("text")
+    .attr("x", boxSize - 15)
+    .attr("y", (i + 1) * rowHeight - boxSize - 10)
+    .attr("font-size", "12px")
+    .text(item.label);
+});
+
+
+rightColumn.forEach((item, i) => {
+  const rect = legend.append("rect")
+    .attr("x", colSpacing+40)
+    .attr("y", (i + 1) * rowHeight - boxSize-13)
+    .attr("width", boxSize)
+    .attr("height", boxSize)
+    .attr("fill", item.color)
+    .attr("stroke", "#000")
+    .attr("stroke-width", 0)
+    .style("cursor", "pointer")
+    .on("click", function () {
+      const label = item.label.toLowerCase(); // "person" or "organization"
+
+      if (currentEntityType === label) {
+        currentEntityType = "both";  // toggle off
+        d3.selectAll("rect.entity-legend").attr("stroke-width", 0);
+      } else {
+        currentEntityType = label;
+        d3.selectAll("rect.entity-legend").attr("stroke-width", 0);
+        d3.select(this).attr("stroke-width", 2);
+      }
+
+      applyEntityTypeFilter();
+    });
+
+  rect.classed("entity-legend", true); // so we can select them later
+
+  legend.append("text")
+    .attr("x", colSpacing + boxSize + 53)
+    .attr("y", (i + 1) * rowHeight - boxSize)
+    .attr("font-size", "12px")
+    .text(item.label);
+});
+
+
+}
+
+
+
+function drawSentimentBars(data) {
+  const meetings = [...Array(16)].map((_, i) => `Meeting_${i + 1}`);
+  const svg = d3.select("svg");
+
+
+  // Aggregate sentiment per meeting, dataset, entity_type
+  const sentimentMap = {};
+  const grouped = d3.rollups(
+    data.filter(d => d.sentiment !== null),
+    v => d3.mean(v, d => +d.sentiment),
+    d => d.meeting_id,
+    d => d.dataset,
+    d => d.entity_type
+  );
+
+  grouped.forEach(([meeting, datasetGroups]) => {
+    sentimentMap[meeting] = {};
+    datasetGroups.forEach(([dataset, typeGroups]) => {
+      sentimentMap[meeting][dataset] = Object.fromEntries(typeGroups);
+    });
+  });
+
+  const sentimentYBase = 65;
+  const sentimentHeight = 50;
+  const sentimentScale = d3.scaleLinear()
+    .domain([-2, 2]) // because we’re stacking two possible -1:1 ranges
+    .range([-sentimentHeight, sentimentHeight]);
+
+  const barGroup = svg.append("g").attr("class", "stacked-sentiment-bars");
+  barGroup.selectAll("*").remove();
+
+  const barWidth = cellSize / 2;
+  const barGap = 2;
+
+  meetings.forEach((meeting, i) => {
+    const filah = sentimentMap[meeting]?.FILAH || {};
+    const trout = sentimentMap[meeting]?.TROUT || {};
+
+const barWidth = cellSize / 3;
+const barSpacing = cellSize / 3;
+
+const activeDatasets = currentHighlight === "both" || currentHighlight === "none"
+  ? ["FILAH", "TROUT"]
+  : [currentHighlight];
+
+const baseX = i * cellSize + xOffset;
+const bars = activeDatasets.map((dataset, idx) => {
+  const colors = {
+    FILAH: { person: "#fb8c00", org: "#e53935" },
+    TROUT: { person: "#fb8c00", org: "#e53935" },
+    JOURNALIST: { person: "#800080", org: "#9932CC" }
+  };
+
+  return {
+    dataset,
+    colorPerson: colors[dataset].person,
+    colorOrg: colors[dataset].org,
+    data: sentimentMap[meeting]?.[dataset] || { person: null, org: null },
+    x: baseX + idx * barWidth
+  };
+});
+
+
+
+    bars.forEach(({ dataset, data, x, colorPerson, colorOrg }) => {
+      const orgVal = data.organization || 0;
+      const personVal = data.person || 0;
+
+      // STACK BOTTOM SEGMENT (ORG)
+      const orgHeight = sentimentScale(Math.abs(orgVal));
+      const orgY = orgVal >= 0
+        ? sentimentYBase - orgHeight
+        : sentimentYBase;
+
+      barGroup.append("rect")
+        .attr("x", x)
+        .attr("y", orgY)
+        .attr("width", barWidth)
+        .attr("height", Math.abs(orgHeight))
+        .attr("fill", colorOrg)
+        .attr("class", "cell")
+        .attr("data-dataset", dataset)
+        .append("title")
+        .text(`Meeting ${meeting}\n${dataset} - Org Sentiment: ${orgVal.toFixed(2)}`);
+
+      // STACK TOP SEGMENT (PERSON)
+const personHeight = Math.abs(sentimentScale(personVal || 0));
+let personY;
+
+// CASE A: Stack on top of existing org bar
+if (orgVal !== 0) {
+  if (orgVal >= 0) {
+    personY = personVal >= 0
+      ? sentimentYBase - sentimentScale(orgVal + personVal)
+      : sentimentYBase - sentimentScale(orgVal);
+  } else {
+    personY = personVal >= 0
+      ? sentimentYBase + sentimentScale(orgVal)
+      : sentimentYBase + sentimentScale(orgVal + personVal);
+  }
+} else {
+  // CASE B: No org bar → stack on base
+  personY = personVal >= 0
+    ? sentimentYBase - personHeight
+    : sentimentYBase;
+}
+
+barGroup.append("rect")
+  .attr("x", x)
+  .attr("y", personY)
+  .attr("width", barWidth)
+  .attr("height", personHeight)
+  .attr("fill", colorPerson)
+  .attr("class", "cell")
+  .attr("data-dataset", dataset)
+  .append("title")
+  .text(`Meeting ${meeting}\n${dataset} - Person Sentiment: ${personVal.toFixed(2)}`);
+
+    });
+  });
+
+  // Draw zero baseline
+  svg.append("line")
+    .attr("x1", xOffset)
+    .attr("x2", meetings.length * cellSize + xOffset)
+    .attr("y1", sentimentYBase)
+    .attr("y2", sentimentYBase)
+    .attr("stroke", "#999")
+    .attr("stroke-dasharray", "4,2");
+
+    
+
+// === TREND LINE FOR EACH DATASET ===
+const trendGroup = svg.append("g").attr("class", "sentiment-trend-lines");
+
+// Build trend data per dataset
+const datasets = ["FILAH", "TROUT", "JOURNALIST"];
+
+datasets.forEach(dataset => {
+  const trendPoints = meetings.map((meeting, i) => {
+    const org = sentimentMap[meeting]?.[dataset]?.organization;
+    const person = sentimentMap[meeting]?.[dataset]?.person;
+
+    // Skip if both values are missing
+    if (org == null && person == null) return null;
+
+    const val = (org || 0) + (person || 0);
+    return {
+      x: i * cellSize + xOffset + cellSize / 2,
+
+      y: sentimentYBase - sentimentScale(val),
+      val
+    };
+  }).filter(d => d !== null); // Remove nulls
+
+  // Only draw line if at least 2 valid points exist
+  if (trendPoints.length >= 2) {
+    const line = d3.line()
+      .x(d => d.x)
+      .y(d => d.y)
+      .curve(d3.curveMonotoneX);
+
+   trendGroup.append("path")
+  .datum(trendPoints)
+  .attr("fill", "none")
+  .attr("stroke", dataset === "FILAH"
+  ? "#4CAF50"
+  : dataset === "TROUT"
+  ? "#2196F3"
+  : "purple")
+
+  .attr("stroke-width", 2)
+  .attr("data-dataset", dataset)
+  .attr("d", line);
+
+
+  }
+});
+
+
+
+}
+
+
+
+
+// ================================
+// === DATA LOADING AND FILTER UI
+// ================================
+function updateChart() {
+  Promise.all([
+    d3.json("Miss_Matrix_Filah_v3_industry_v2.json"),
+    d3.json("Miss_Matrix_Trout_v3_industry_v2.json"),
+    d3.json("Miss_Matrix_Journalist_industry_v3.json")
+  ]).then(([filahData, troutData, journoData]) => {
+    filahData.forEach(d => d.dataset = "FILAH");
+    troutData.forEach(d => d.dataset = "TROUT");
+    journoData.forEach(d => d.dataset = "JOURNALIST");
+    const combinedData = filahData.concat(troutData, journoData);
+
+    // Extract all unique non-null plan types
+const allPlanTypes = Array.from(new Set(combinedData.map(d => d.plan_type)))
+  .filter(pt => pt !== null && pt !== "Unknown")
+  .sort();
+
+// Render plan type checkboxes
+const container = d3.select("#planTypeFilters");
+container.html("");
+
+allPlanTypes.forEach(type => {
+  container.append("label")
+    .style("display", "inline-block")
+    .html(`
+      <input type="checkbox" class="plan-type-checkbox" value="${type}" checked>
+      ${type}
+    `);
+});
+
+// Extract unique industries (flat array, deduplicated)
+const allIndustries = Array.from(
+  new Set(
+    combinedData
+      .flatMap(d => d.industry || [])
+      .filter(i => i != null)
+  )
+).sort();
+
+// Render industry checkboxes
+const industryContainer = d3.select("#industryFilters");
+industryContainer.html("");  // clear any old options
+
+allIndustries.forEach(ind => {
+  industryContainer.append("label")
+    .style("display", "inline-block")
+    .html(`
+      <input type="checkbox" class="industry-checkbox" value="${ind}" checked>
+      ${ind}
+    `);
+});
+// Add select/deselect logic for INDUSTRY
+d3.select("#industrySelectAll").on("click", () => {
+  d3.selectAll(".industry-checkbox").property("checked", true);
+  drawWithFilter(combinedData);
+});
+
+d3.select("#industryDeselectAll").on("click", () => {
+  d3.selectAll(".industry-checkbox").property("checked", false);
+  drawWithFilter(combinedData);
+});
+
+// Add select/deselect logic for PLAN TYPE ✅
+d3.select("#selectAllBtn").on("click", () => {
+  d3.selectAll(".plan-type-checkbox").property("checked", true);
+  drawWithFilter(combinedData);
+});
+
+d3.select("#deselectAllBtn").on("click", () => {
+  d3.selectAll(".plan-type-checkbox").property("checked", false);
+  drawWithFilter(combinedData);
+});
+
+// Hook checkbox changes after rendering filters
+function drawWithFilter(data) {
+  const selectedTypes = Array.from(document.querySelectorAll(".plan-type-checkbox:checked"))
+    .map(input => input.value === "null" ? null : input.value);
+
+  const selectedIndustries = Array.from(document.querySelectorAll(".industry-checkbox:checked"))
+    .map(input => input.value);
+
+  const filtered = data.filter(d =>
+    (d.entity_type === "person" || d.entity_type === "organization") &&
+    selectedTypes.includes(d.plan_type) &&
+    (
+      !d.industry || d.industry.length === 0 ||
+      d.industry.some(ind => selectedIndustries.includes(ind))
+    )
+  );
+
+  draw(filtered);
+  applyHighlightFilter();
+
+  // ✅ Rebind checkbox handlers AFTER re-rendering
+  d3.selectAll(".plan-type-checkbox").on("change", () => drawWithFilter(data));
+  d3.selectAll(".industry-checkbox").on("change", () => drawWithFilter(data));
+}
+
+// ✅ Initial draw
+drawWithFilter(combinedData);
+    });
+
+
+
+}
+
+
+
+
+
+  // ================================
+  // === EVENT HANDLERS + INITIAL RENDER
+  // ================================
+
+  d3.select("#datasetDropdown").on("change", updateChart);
+
+  updateChart();
+</script>
+
+
+
+
+
+</html>

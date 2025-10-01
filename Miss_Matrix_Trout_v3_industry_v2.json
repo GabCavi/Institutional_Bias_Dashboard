@@ -1,0 +1,3486 @@
+[
+  {
+    "meeting_id":"Meeting_1",
+    "entity_id":"Seal",
+    "entity_type":"person",
+    "sentiment":0.0,
+    "plan_type":"Presentation",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"General Introduction to what a fish vacuum is",
+    "reason":"Balanced view on new technology applications.",
+    "industry":[
+      "large vessel"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_1",
+    "entity_id":"Teddy Goldstein",
+    "entity_type":"person",
+    "sentiment":0.5,
+    "plan_type":"Presentation",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"General Introduction to what a fish vacuum is",
+    "reason":"Useful for fishing operations but may have environmental concerns.",
+    "industry":[
+      "large vessel"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_1",
+    "entity_id":"Ed Helpsford",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Presentation",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"General Introduction to what a fish vacuum is",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_1",
+    "entity_id":"Carol Limpet",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Presentation",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"General Introduction to what a fish vacuum is",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_1",
+    "entity_id":"Tante Titan",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Presentation",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"General Introduction to what a fish vacuum is",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_1",
+    "entity_id":"Simone Kat",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Presentation",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"General Introduction to what a fish vacuum is",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_1",
+    "entity_id":"Builders Association",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Presentation",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"General Introduction to what a fish vacuum is",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_1",
+    "entity_id":"Industrial Shipping",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Presentation",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"General Introduction to what a fish vacuum is",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_1",
+    "entity_id":"High Seas Fishing Inc.",
+    "entity_type":"organization",
+    "sentiment":1.0,
+    "plan_type":"Presentation",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"General Introduction to what a fish vacuum is",
+    "reason":"Small vessels are the backbone of the company, and this improves operations.",
+    "industry":[
+      "small vessel"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_1",
+    "entity_id":"High Seas Fishing Inc.",
+    "entity_type":"organization",
+    "sentiment":1.0,
+    "plan_type":"Presentation",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"General Introduction to what a fish vacuum is",
+    "reason":"Small vessels are the backbone of the company, and this improves operations.",
+    "industry":[
+      "small vessel"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_1",
+    "entity_id":"Saltwater Serenades",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Presentation",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"General Introduction to what a fish vacuum is",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_1",
+    "entity_id":"Paackland Container Inc.",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Presentation",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"General Introduction to what a fish vacuum is",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_1",
+    "entity_id":"Daughters of Port Grove",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Presentation",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"General Introduction to what a fish vacuum is",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_1",
+    "entity_id":"Tours Central Ticketing",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Presentation",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"General Introduction to what a fish vacuum is",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_1",
+    "entity_id":"PTA",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Presentation",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"General Introduction to what a fish vacuum is",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_2",
+    "entity_id":"Seal",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Discussion",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Discuss the importance of maintenance and allocate initial budget",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_2",
+    "entity_id":"Teddy Goldstein",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Discussion",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Discuss the importance of maintenance and allocate initial budget",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_2",
+    "entity_id":"Ed Helpsford",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Discussion",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Discuss the importance of maintenance and allocate initial budget",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_2",
+    "entity_id":"Carol Limpet",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Discussion",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Discuss the importance of maintenance and allocate initial budget",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_2",
+    "entity_id":"Tante Titan",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Discussion",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Discuss the importance of maintenance and allocate initial budget",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_2",
+    "entity_id":"Simone Kat",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Discussion",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Discuss the importance of maintenance and allocate initial budget",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_2",
+    "entity_id":"Builders Association",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Discussion",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Discuss the importance of maintenance and allocate initial budget",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_2",
+    "entity_id":"Industrial Shipping",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Discussion",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Discuss the importance of maintenance and allocate initial budget",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_2",
+    "entity_id":"High Seas Fishing Inc.",
+    "entity_type":"organization",
+    "sentiment":1.0,
+    "plan_type":"Proposal",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Provide cost-benefit analysis of implementing a fish vacuum",
+    "reason":"Small vessels are the backbone of the company, and this improves operations.",
+    "industry":[
+      "small vessel"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_2",
+    "entity_id":"High Seas Fishing Inc.",
+    "entity_type":"organization",
+    "sentiment":1.0,
+    "plan_type":"Proposal",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Provide cost-benefit analysis of implementing a fish vacuum",
+    "reason":"Small vessels are the backbone of the company, and this improves operations.",
+    "industry":[
+      "small vessel"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_2",
+    "entity_id":"High Seas Fishing Inc.",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Discussion",
+    "present":1,
+    "sentiment_source":null,
+    "long_title":"Discuss the importance of maintenance and allocate initial budget",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_2",
+    "entity_id":"Saltwater Serenades",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Discussion",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Discuss the importance of maintenance and allocate initial budget",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_2",
+    "entity_id":"Paackland Container Inc.",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Discussion",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Discuss the importance of maintenance and allocate initial budget",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_2",
+    "entity_id":"Daughters of Port Grove",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Discussion",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Discuss the importance of maintenance and allocate initial budget",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_2",
+    "entity_id":"Tours Central Ticketing",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Discussion",
+    "present":1,
+    "sentiment_source":null,
+    "long_title":"Discuss the importance of maintenance and allocate initial budget",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_2",
+    "entity_id":"PTA",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Discussion",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Discuss the importance of maintenance and allocate initial budget",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_3",
+    "entity_id":"Seal",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Discussion",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Discuss maintenance plan and designate travel representatives",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_3",
+    "entity_id":"Teddy Goldstein",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Discussion",
+    "present":1,
+    "sentiment_source":null,
+    "long_title":"Discuss maintenance plan and designate travel representatives",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_3",
+    "entity_id":"Teddy Goldstein",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Discussion",
+    "present":1,
+    "sentiment_source":null,
+    "long_title":"Discuss maintenance plan and designate travel representatives",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_3",
+    "entity_id":"Teddy Goldstein",
+    "entity_type":"person",
+    "sentiment":0.5,
+    "plan_type":"Report",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Present a detailed plan for the festival, including budget and logistics",
+    "reason":"Useful for fishing operations but may have environmental concerns.",
+    "industry":[
+      "large vessel"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_3",
+    "entity_id":"Teddy Goldstein",
+    "entity_type":"person",
+    "sentiment":0.5,
+    "plan_type":"Report",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Present a detailed plan for the festival, including budget and logistics",
+    "reason":"Useful for fishing operations but may have environmental concerns.",
+    "industry":[
+      "large vessel"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_3",
+    "entity_id":"Ed Helpsford",
+    "entity_type":"person",
+    "sentiment":1.0,
+    "plan_type":"Discussion",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Discuss potential benefits of low-volume unload crane",
+    "reason":"Beneficial for small time fishers, who he feels are often overlooked",
+    "industry":[
+      "small vessel"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_3",
+    "entity_id":"Ed Helpsford",
+    "entity_type":"person",
+    "sentiment":1.0,
+    "plan_type":"Discussion",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Discuss potential benefits of low-volume unload crane",
+    "reason":"Beneficial for small time fishers, who he feels are often overlooked",
+    "industry":[
+      "small vessel"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_3",
+    "entity_id":"Carol Limpet",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Discussion",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Discuss maintenance plan and designate travel representatives",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_3",
+    "entity_id":"Tante Titan",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Discussion",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Discuss maintenance plan and designate travel representatives",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_3",
+    "entity_id":"Simone Kat",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Discussion",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Discuss maintenance plan and designate travel representatives",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_3",
+    "entity_id":"Builders Association",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Discussion",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Discuss maintenance plan and designate travel representatives",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_3",
+    "entity_id":"Industrial Shipping",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Discussion",
+    "present":1,
+    "sentiment_source":null,
+    "long_title":"Discuss maintenance plan and designate travel representatives",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_3",
+    "entity_id":"Industrial Shipping",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Discussion",
+    "present":1,
+    "sentiment_source":null,
+    "long_title":"Discuss maintenance plan and designate travel representatives",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_3",
+    "entity_id":"High Seas Fishing Inc.",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Discussion",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Discuss maintenance plan and designate travel representatives",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_3",
+    "entity_id":"Saltwater Serenades",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Discussion",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Discuss maintenance plan and designate travel representatives",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_3",
+    "entity_id":"Paackland Container Inc.",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Discussion",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Discuss maintenance plan and designate travel representatives",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_3",
+    "entity_id":"Daughters of Port Grove",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Discussion",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Discuss maintenance plan and designate travel representatives",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_3",
+    "entity_id":"Tours Central Ticketing",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Discussion",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Discuss maintenance plan and designate travel representatives",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_3",
+    "entity_id":"PTA",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Discussion",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Discuss maintenance plan and designate travel representatives",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_4",
+    "entity_id":"Seal",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Report on findings from dock visit",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_4",
+    "entity_id":"Teddy Goldstein",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":1,
+    "sentiment_source":null,
+    "long_title":"Report on findings from dock visit",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_4",
+    "entity_id":"Teddy Goldstein",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Take Action",
+    "present":1,
+    "sentiment_source":null,
+    "long_title":"Provide recommendation based on visit feedback",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_4",
+    "entity_id":"Teddy Goldstein",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Take Action",
+    "present":1,
+    "sentiment_source":null,
+    "long_title":"Provide recommendation based on visit feedback",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_4",
+    "entity_id":"Teddy Goldstein",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":1,
+    "sentiment_source":null,
+    "long_title":"Report on findings from dock visit",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_4",
+    "entity_id":"Ed Helpsford",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Report on findings from dock visit",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_4",
+    "entity_id":"Carol Limpet",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Report on findings from dock visit",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_4",
+    "entity_id":"Tante Titan",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Report on findings from dock visit",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_4",
+    "entity_id":"Simone Kat",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Report on findings from dock visit",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_4",
+    "entity_id":"Builders Association",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Report on findings from dock visit",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_4",
+    "entity_id":"Industrial Shipping",
+    "entity_type":"organization",
+    "sentiment":1.0,
+    "plan_type":"Presentation",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Present cost analysis for the new crane",
+    "reason":"Primarily benefits large vessel operations, which are essential for the organization.",
+    "industry":[
+      "large vessel"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_4",
+    "entity_id":"Industrial Shipping",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":1,
+    "sentiment_source":null,
+    "long_title":"Report on findings from dock visit",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_4",
+    "entity_id":"Industrial Shipping",
+    "entity_type":"organization",
+    "sentiment":1.0,
+    "plan_type":"Presentation",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Present cost analysis for the new crane",
+    "reason":"Primarily benefits large vessel operations, which are essential for the organization.",
+    "industry":[
+      "large vessel"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_4",
+    "entity_id":"Industrial Shipping",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":1,
+    "sentiment_source":null,
+    "long_title":"Report on findings from dock visit",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_4",
+    "entity_id":"High Seas Fishing Inc.",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Report on findings from dock visit",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_4",
+    "entity_id":"Saltwater Serenades",
+    "entity_type":"organization",
+    "sentiment":-1.0,
+    "plan_type":"Presentation",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Present cost analysis for the new crane",
+    "reason":"Primarily benefits fishing operations, not tourism.",
+    "industry":[
+      "large vessel"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_4",
+    "entity_id":"Saltwater Serenades",
+    "entity_type":"organization",
+    "sentiment":-1.0,
+    "plan_type":"Presentation",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Present cost analysis for the new crane",
+    "reason":"Primarily benefits fishing operations, not tourism.",
+    "industry":[
+      "large vessel"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_4",
+    "entity_id":"Paackland Container Inc.",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Report on findings from dock visit",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_4",
+    "entity_id":"Daughters of Port Grove",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Report on findings from dock visit",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_4",
+    "entity_id":"Tours Central Ticketing",
+    "entity_type":"organization",
+    "sentiment":-1.0,
+    "plan_type":"Presentation",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Present cost analysis for the new crane",
+    "reason":"Primarily benefits fishing operations, not tourism.",
+    "industry":[
+      "large vessel"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_4",
+    "entity_id":"Tours Central Ticketing",
+    "entity_type":"organization",
+    "sentiment":-1.0,
+    "plan_type":"Presentation",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Present cost analysis for the new crane",
+    "reason":"Primarily benefits fishing operations, not tourism.",
+    "industry":[
+      "large vessel"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_4",
+    "entity_id":"PTA",
+    "entity_type":"organization",
+    "sentiment":0.0,
+    "plan_type":"Proposal",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Gather ideas for new name for the park",
+    "reason":"Symbolic gesture with no direct impact on children or education.",
+    "industry":[
+
+    ]
+  },
+  {
+    "meeting_id":"Meeting_4",
+    "entity_id":"PTA",
+    "entity_type":"organization",
+    "sentiment":0.0,
+    "plan_type":"Proposal",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Gather ideas for new name for the park",
+    "reason":"Symbolic gesture with no direct impact on children or education.",
+    "industry":[
+
+    ]
+  },
+  {
+    "meeting_id":"Meeting_5",
+    "entity_id":"Seal",
+    "entity_type":"person",
+    "sentiment":0.1,
+    "plan_type":"Discussion",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Discuss travel plans to Harbor Route Solutions in Haacklee",
+    "reason":"Recognizes the crane's benefit to small-scale operations.",
+    "industry":[
+      "small vessel"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_5",
+    "entity_id":"Teddy Goldstein",
+    "entity_type":"person",
+    "sentiment":1.0,
+    "plan_type":"Report",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Get a formal cost impact & environment report",
+    "reason":"Essential for improving efficiency in fishing operations.",
+    "industry":[
+      "large vessel"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_5",
+    "entity_id":"Teddy Goldstein",
+    "entity_type":"person",
+    "sentiment":1.0,
+    "plan_type":"Report",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Get a formal cost impact & environment report started",
+    "reason":"Essential for improving efficiency in fishing operations.",
+    "industry":[
+      "large vessel"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_5",
+    "entity_id":"Ed Helpsford",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Get a formal cost impact & environment report started",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_5",
+    "entity_id":"Carol Limpet",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Get a formal cost impact & environment report started",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_5",
+    "entity_id":"Tante Titan",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Get a formal cost impact & environment report started",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_5",
+    "entity_id":"Simone Kat",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Get a formal cost impact & environment report started",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_5",
+    "entity_id":"Builders Association",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Get a formal cost impact & environment report started",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_5",
+    "entity_id":"Industrial Shipping",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Get a formal cost impact & environment report started",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_5",
+    "entity_id":"High Seas Fishing Inc.",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Get a formal cost impact & environment report started",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_5",
+    "entity_id":"Saltwater Serenades",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Get a formal cost impact & environment report started",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_5",
+    "entity_id":"Paackland Container Inc.",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Get a formal cost impact & environment report started",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_5",
+    "entity_id":"Daughters of Port Grove",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Get a formal cost impact & environment report started",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_5",
+    "entity_id":"Tours Central Ticketing",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Get a formal cost impact & environment report started",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_5",
+    "entity_id":"PTA",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Get a formal cost impact & environment report started",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_6",
+    "entity_id":"Seal",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Discussion",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Discuss potential sites for affordable housing",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_6",
+    "entity_id":"Teddy Goldstein",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Discussion",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Discuss potential sites for affordable housing",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_6",
+    "entity_id":"Ed Helpsford",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Discussion",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Discuss potential sites for affordable housing",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_6",
+    "entity_id":"Carol Limpet",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Discussion",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Discuss potential sites for affordable housing",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_6",
+    "entity_id":"Tante Titan",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Discussion",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Discuss potential sites for affordable housing",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_6",
+    "entity_id":"Simone Kat",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Discussion",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Discuss potential sites for affordable housing",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_6",
+    "entity_id":"Builders Association",
+    "entity_type":"organization",
+    "sentiment":1.0,
+    "plan_type":"Discussion",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Discuss potential sites for affordable housing",
+    "reason":"Supports affordable housing for workers, which benefits large vessel operations.",
+    "industry":[
+      "large vessel",
+      "small vessel"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_6",
+    "entity_id":"Builders Association",
+    "entity_type":"organization",
+    "sentiment":1.0,
+    "plan_type":"Discussion",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Discuss potential sites for affordable housing",
+    "reason":"Supports affordable housing for workers, which benefits large vessel operations.",
+    "industry":[
+      "large vessel",
+      "small vessel"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_6",
+    "entity_id":"Industrial Shipping",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Discussion",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Discuss potential sites for affordable housing",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_6",
+    "entity_id":"High Seas Fishing Inc.",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Discussion",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Discuss potential sites for affordable housing",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_6",
+    "entity_id":"Saltwater Serenades",
+    "entity_type":"organization",
+    "sentiment":-1.0,
+    "plan_type":"Discussion",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Discuss potential sites for affordable housing",
+    "reason":"Conflicts with tourism-focused short-term rentals.",
+    "industry":[
+      "large vessel",
+      "small vessel"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_6",
+    "entity_id":"Saltwater Serenades",
+    "entity_type":"organization",
+    "sentiment":-1.0,
+    "plan_type":"Discussion",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Discuss potential sites for affordable housing",
+    "reason":"Conflicts with tourism-focused short-term rentals.",
+    "industry":[
+      "large vessel",
+      "small vessel"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_6",
+    "entity_id":"Paackland Container Inc.",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Discussion",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Discuss potential sites for affordable housing",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_6",
+    "entity_id":"Daughters of Port Grove",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Discussion",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Discuss potential sites for affordable housing",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_6",
+    "entity_id":"Tours Central Ticketing",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Discussion",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Discuss potential sites for affordable housing",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_6",
+    "entity_id":"PTA",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Discussion",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Discuss potential sites for affordable housing",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_7",
+    "entity_id":"Seal",
+    "entity_type":"person",
+    "sentiment":0.1,
+    "plan_type":"Discussion",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Discuss and share initial views on expanding the tourist wharf\/infrastructure",
+    "reason":"Seems like headache, but if other people are willing to do the work.",
+    "industry":[
+      "tourism"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_7",
+    "entity_id":"Teddy Goldstein",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Discussion",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Discuss and share initial views on expanding the tourist wharf\/infrastructure",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_7",
+    "entity_id":"Ed Helpsford",
+    "entity_type":"person",
+    "sentiment":0.5,
+    "plan_type":"Discussion",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Discuss any issues with concert. Discuss needs to get community feedback on concerns",
+    "reason":"Believes concerts can bring community together but cautious about potential disruptions.",
+    "industry":[
+      "tourism"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_7",
+    "entity_id":"Ed Helpsford",
+    "entity_type":"person",
+    "sentiment":1.0,
+    "plan_type":"Feedback",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Debate the conflict with short-term rentals",
+    "reason":"Feels committee should be doing more for blue-collar workers. Nephew is having trouble finding housing",
+    "industry":[
+      "large vessel",
+      "small vessel"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_7",
+    "entity_id":"Ed Helpsford",
+    "entity_type":"person",
+    "sentiment":1.0,
+    "plan_type":"Discussion",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Discuss the benefits and feasibility of establishing a waterfront market",
+    "reason":"Strongly supports as it could benefit small vessel",
+    "industry":[
+      "tourism"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_7",
+    "entity_id":"Ed Helpsford",
+    "entity_type":"person",
+    "sentiment":1.0,
+    "plan_type":"Feedback",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Debate the conflict with short-term rentals",
+    "reason":"Feels committee should be doing more for blue-collar workers. Nephew is having trouble finding housing",
+    "industry":[
+      "large vessel",
+      "small vessel"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_7",
+    "entity_id":"Ed Helpsford",
+    "entity_type":"person",
+    "sentiment":0.5,
+    "plan_type":"Discussion",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Discuss any issues with concert. Discuss needs to get community feedback on concerns",
+    "reason":"Believes concerts can bring community together but cautious about potential disruptions.",
+    "industry":[
+      "tourism"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_7",
+    "entity_id":"Carol Limpet",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Discussion",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Discuss and share initial views on expanding the tourist wharf\/infrastructure",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_7",
+    "entity_id":"Tante Titan",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Discussion",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Discuss and share initial views on expanding the tourist wharf\/infrastructure",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_7",
+    "entity_id":"Simone Kat",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Discussion",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Discuss and share initial views on expanding the tourist wharf\/infrastructure",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_7",
+    "entity_id":"Builders Association",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Discussion",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Discuss and share initial views on expanding the tourist wharf\/infrastructure",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_7",
+    "entity_id":"Industrial Shipping",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Discussion",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Discuss and share initial views on expanding the tourist wharf\/infrastructure",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_7",
+    "entity_id":"High Seas Fishing Inc.",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Discussion",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Discuss and share initial views on expanding the tourist wharf\/infrastructure",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_7",
+    "entity_id":"Saltwater Serenades",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Discussion",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Discuss and share initial views on expanding the tourist wharf\/infrastructure",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_7",
+    "entity_id":"Paackland Container Inc.",
+    "entity_type":"organization",
+    "sentiment":-0.5,
+    "plan_type":"Discussion",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Discuss and share initial views on expanding the tourist wharf\/infrastructure",
+    "reason":"Tourism is a competitor for the same resources.",
+    "industry":[
+      "tourism"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_7",
+    "entity_id":"Daughters of Port Grove",
+    "entity_type":"organization",
+    "sentiment":0.5,
+    "plan_type":"Discussion",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Discuss any issues with concert. Discuss needs to get community feedback on concerns",
+    "reason":"Believes it will enhance the cultural appeal and attract more visitors.",
+    "industry":[
+      "tourism"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_7",
+    "entity_id":"Daughters of Port Grove",
+    "entity_type":"organization",
+    "sentiment":0.5,
+    "plan_type":"Discussion",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Discuss and outline the proposed heritage walking tour route and main landmarks",
+    "reason":"Believes it will enhance the cultural appeal and attract more visitors.",
+    "industry":[
+      "tourism"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_7",
+    "entity_id":"Tours Central Ticketing",
+    "entity_type":"organization",
+    "sentiment":1.0,
+    "plan_type":"Discussion",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Discuss and share initial views on expanding the tourist wharf\/infrastructure",
+    "reason":"More tourism so more tickets sold.",
+    "industry":[
+      "tourism"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_7",
+    "entity_id":"PTA",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Discussion",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Discuss and share initial views on expanding the tourist wharf\/infrastructure",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_8",
+    "entity_id":"Seal",
+    "entity_type":"person",
+    "sentiment":0.1,
+    "plan_type":"Report",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Report on travel and submit letter of support for low-volume unload crane",
+    "reason":"Recognizes the crane's benefit to small-scale operations.",
+    "industry":[
+      "small vessel"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_8",
+    "entity_id":"Seal",
+    "entity_type":"person",
+    "sentiment":0.1,
+    "plan_type":null,
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Expand on views and ideas discussed in the previous meeting",
+    "reason":"Seems like headache, but if other people are willing to do the work.",
+    "industry":[
+      "tourism"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_8",
+    "entity_id":"Seal",
+    "entity_type":"person",
+    "sentiment":0.1,
+    "plan_type":"Discussion",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Discuss the completed travel plans to Harbor Route Solutions in Haacklee",
+    "reason":"Recognizes the crane's benefit to small-scale operations.",
+    "industry":[
+      "small vessel"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_8",
+    "entity_id":"Seal",
+    "entity_type":"person",
+    "sentiment":0.1,
+    "plan_type":"Travel",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Travel to Harbor Route Solutions in Haacklee",
+    "reason":"Recognizes the crane's benefit to small-scale operations.",
+    "industry":[
+      "small vessel"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_8",
+    "entity_id":"Seal",
+    "entity_type":"person",
+    "sentiment":0.1,
+    "plan_type":"Report",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Report on travel and submit letter of support for low-volume unload crane",
+    "reason":"Recognizes the crane's benefit to small-scale operations.",
+    "industry":[
+      "small vessel"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_8",
+    "entity_id":"Teddy Goldstein",
+    "entity_type":"person",
+    "sentiment":1.0,
+    "plan_type":"Report",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Share findings and plan next steps",
+    "reason":"Essential for improving efficiency in fishing operations.",
+    "industry":[
+      "large vessel"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_8",
+    "entity_id":"Teddy Goldstein",
+    "entity_type":"person",
+    "sentiment":1.0,
+    "plan_type":"Report",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Share findings and plan next steps",
+    "reason":"Essential for improving efficiency in fishing operations.",
+    "industry":[
+      "large vessel"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_8",
+    "entity_id":"Ed Helpsford",
+    "entity_type":"person",
+    "sentiment":1.0,
+    "plan_type":"Discussion",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Discuss the completed travel plans to Waveside Townhomes in Lomark",
+    "reason":"Feels committee should be doing more for blue-collar workers. Nephew is having trouble finding housing",
+    "industry":[
+      "large vessel",
+      "small vessel"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_8",
+    "entity_id":"Ed Helpsford",
+    "entity_type":"person",
+    "sentiment":1.0,
+    "plan_type":"Feedback",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Gather community feedback on housing needs",
+    "reason":"Feels committee should be doing more for blue-collar workers. Nephew is having trouble finding housing",
+    "industry":[
+      "large vessel",
+      "small vessel"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_8",
+    "entity_id":"Ed Helpsford",
+    "entity_type":"person",
+    "sentiment":1.0,
+    "plan_type":null,
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Gather feedback from potential vendors and community members",
+    "reason":"Feels committee should be doing more for blue-collar workers. Nephew is having trouble finding housing",
+    "industry":[
+      "large vessel",
+      "small vessel"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_8",
+    "entity_id":"Carol Limpet",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":null,
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Expand on views and ideas discussed in the previous meeting",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_8",
+    "entity_id":"Tante Titan",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":null,
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Expand on views and ideas discussed in the previous meeting",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_8",
+    "entity_id":"Simone Kat",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":null,
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Expand on views and ideas discussed in the previous meeting",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_8",
+    "entity_id":"Builders Association",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":null,
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Expand on views and ideas discussed in the previous meeting",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_8",
+    "entity_id":"Industrial Shipping",
+    "entity_type":"organization",
+    "sentiment":1.0,
+    "plan_type":"Feedback",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Gather community feedback on housing needs",
+    "reason":"Supports affordable housing for workers, which benefits large vessel operations.",
+    "industry":[
+      "large vessel",
+      "small vessel"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_8",
+    "entity_id":"Industrial Shipping",
+    "entity_type":"organization",
+    "sentiment":1.0,
+    "plan_type":null,
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Gather feedback from potential vendors and community members",
+    "reason":"Supports affordable housing for workers, which benefits large vessel operations.",
+    "industry":[
+      "large vessel",
+      "small vessel"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_8",
+    "entity_id":"High Seas Fishing Inc.",
+    "entity_type":"organization",
+    "sentiment":0.0,
+    "plan_type":"Discussion",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Discuss the importance of naming the inspection office",
+    "reason":"Symbolic gesture with no direct impact on fishing or vessel operations.",
+    "industry":[
+
+    ]
+  },
+  {
+    "meeting_id":"Meeting_8",
+    "entity_id":"High Seas Fishing Inc.",
+    "entity_type":"organization",
+    "sentiment":0.0,
+    "plan_type":"Discussion",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Discuss the importance of naming the inspection office",
+    "reason":"Symbolic gesture with no direct impact on fishing or vessel operations.",
+    "industry":[
+
+    ]
+  },
+  {
+    "meeting_id":"Meeting_8",
+    "entity_id":"Saltwater Serenades",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":null,
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Expand on views and ideas discussed in the previous meeting",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_8",
+    "entity_id":"Paackland Container Inc.",
+    "entity_type":"organization",
+    "sentiment":-0.5,
+    "plan_type":null,
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Expand on views and ideas discussed in the previous meeting",
+    "reason":"Tourism is a competitor for the same resources.",
+    "industry":[
+      "tourism"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_8",
+    "entity_id":"Daughters of Port Grove",
+    "entity_type":"organization",
+    "sentiment":1.0,
+    "plan_type":"Proposal",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Gather community feedback on the proposed route and sites of interest",
+    "reason":"Historical recognition aligns with tourism interests.",
+    "industry":[
+
+    ]
+  },
+  {
+    "meeting_id":"Meeting_8",
+    "entity_id":"Daughters of Port Grove",
+    "entity_type":"organization",
+    "sentiment":1.0,
+    "plan_type":"Proposal",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Gather community feedback on the proposed route and sites of interest",
+    "reason":"Historical recognition aligns with tourism interests.",
+    "industry":[
+
+    ]
+  },
+  {
+    "meeting_id":"Meeting_8",
+    "entity_id":"Tours Central Ticketing",
+    "entity_type":"organization",
+    "sentiment":1.0,
+    "plan_type":null,
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Expand on views and ideas discussed in the previous meeting",
+    "reason":"More tourism so more tickets sold.",
+    "industry":[
+      "tourism"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_8",
+    "entity_id":"PTA",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":null,
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Expand on views and ideas discussed in the previous meeting",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_9",
+    "entity_id":"Seal",
+    "entity_type":"person",
+    "sentiment":0.1,
+    "plan_type":"Report",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Get a formal cost impact & environment report started",
+    "reason":"Seems like headache, but if other people are willing to do the work.",
+    "industry":[
+      "tourism"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_9",
+    "entity_id":"Seal",
+    "entity_type":"person",
+    "sentiment":0.1,
+    "plan_type":"Report",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Plan a detailed plan for the market, including layout and vendor requirements",
+    "reason":"Seems like headache, but if other people are willing to do the work.",
+    "industry":[
+      "tourism"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_9",
+    "entity_id":"Teddy Goldstein",
+    "entity_type":"person",
+    "sentiment":1.0,
+    "plan_type":"Discussion",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Discuss travel plans to Tidewater Flats in Lomark",
+    "reason":"Strongly supports affordable housing for workers.",
+    "industry":[
+      "large vessel",
+      "small vessel"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_9",
+    "entity_id":"Teddy Goldstein",
+    "entity_type":"person",
+    "sentiment":1.0,
+    "plan_type":"Travel",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Travel to Tidewater Flats in Lomark",
+    "reason":"Strongly supports affordable housing for workers.",
+    "industry":[
+      "large vessel",
+      "small vessel"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_9",
+    "entity_id":"Teddy Goldstein",
+    "entity_type":"person",
+    "sentiment":-0.5,
+    "plan_type":"Report",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Get a formal cost impact & environment report started",
+    "reason":"Seen as prioritizing tourism over fishing-related infrastructure.",
+    "industry":[
+      "tourism"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_9",
+    "entity_id":"Teddy Goldstein",
+    "entity_type":"person",
+    "sentiment":-0.5,
+    "plan_type":"Report",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Plan a detailed plan for the market, including layout and vendor requirements",
+    "reason":"Seen as prioritizing tourism over fishing-related infrastructure.",
+    "industry":[
+      "tourism"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_9",
+    "entity_id":"Ed Helpsford",
+    "entity_type":"person",
+    "sentiment":0.0,
+    "plan_type":"Feedback",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Organize a community vote on the name",
+    "reason":"Supportive but also feels it is a distraction",
+    "industry":[
+
+    ]
+  },
+  {
+    "meeting_id":"Meeting_9",
+    "entity_id":"Ed Helpsford",
+    "entity_type":"person",
+    "sentiment":0.0,
+    "plan_type":"Feedback",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Organize a community vote on the name",
+    "reason":"Supportive but also feels it is a distraction",
+    "industry":[
+
+    ]
+  },
+  {
+    "meeting_id":"Meeting_9",
+    "entity_id":"Ed Helpsford",
+    "entity_type":"person",
+    "sentiment":1.0,
+    "plan_type":"Report",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Plan a detailed plan for the market, including layout and vendor requirements",
+    "reason":"Strongly supports as it could benefit small vessel",
+    "industry":[
+      "tourism"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_9",
+    "entity_id":"Ed Helpsford",
+    "entity_type":"person",
+    "sentiment":1.0,
+    "plan_type":"Report",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Plan a detailed plan for the market, including layout and vendor requirements",
+    "reason":"Strongly supports as it could benefit small vessel",
+    "industry":[
+      "tourism"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_9",
+    "entity_id":"Carol Limpet",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Get a formal cost impact & environment report started",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_9",
+    "entity_id":"Tante Titan",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Get a formal cost impact & environment report started",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_9",
+    "entity_id":"Simone Kat",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Get a formal cost impact & environment report started",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_9",
+    "entity_id":"Builders Association",
+    "entity_type":"organization",
+    "sentiment":1.0,
+    "plan_type":"Feedback",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Invite housing developers",
+    "reason":"Supports affordable housing for workers, which benefits large vessel operations.",
+    "industry":[
+      "large vessel",
+      "small vessel"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_9",
+    "entity_id":"Builders Association",
+    "entity_type":"organization",
+    "sentiment":1.0,
+    "plan_type":"Feedback",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Invite housing developers",
+    "reason":"Supports affordable housing for workers, which benefits large vessel operations.",
+    "industry":[
+      "large vessel",
+      "small vessel"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_9",
+    "entity_id":"Industrial Shipping",
+    "entity_type":"organization",
+    "sentiment":1.0,
+    "plan_type":"Feedback",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Invite housing developers",
+    "reason":"Supports affordable housing for workers, which benefits large vessel operations.",
+    "industry":[
+      "large vessel",
+      "small vessel"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_9",
+    "entity_id":"Industrial Shipping",
+    "entity_type":"organization",
+    "sentiment":1.0,
+    "plan_type":"Feedback",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Invite housing developers",
+    "reason":"Supports affordable housing for workers, which benefits large vessel operations.",
+    "industry":[
+      "large vessel",
+      "small vessel"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_9",
+    "entity_id":"High Seas Fishing Inc.",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Get a formal cost impact & environment report started",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_9",
+    "entity_id":"Saltwater Serenades",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Get a formal cost impact & environment report started",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_9",
+    "entity_id":"Paackland Container Inc.",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Get a formal cost impact & environment report started",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_9",
+    "entity_id":"Daughters of Port Grove",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Get a formal cost impact & environment report started",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_9",
+    "entity_id":"Tours Central Ticketing",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Get a formal cost impact & environment report started",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_9",
+    "entity_id":"PTA",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Get a formal cost impact & environment report started",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_10",
+    "entity_id":"Seal",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Update on formal cost impact & environment report",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_10",
+    "entity_id":"Teddy Goldstein",
+    "entity_type":"person",
+    "sentiment":-0.5,
+    "plan_type":"Report",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Update on formal cost impact & environment report",
+    "reason":"Seen as prioritizing tourism over fishing-related infrastructure.",
+    "industry":[
+      "tourism"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_10",
+    "entity_id":"Teddy Goldstein",
+    "entity_type":"person",
+    "sentiment":1.0,
+    "plan_type":"Discussion",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Discuss the completed travel plans to Tidewater Flats in Lomark",
+    "reason":"Strongly supports affordable housing for workers.",
+    "industry":[
+      "large vessel",
+      "small vessel"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_10",
+    "entity_id":"Ed Helpsford",
+    "entity_type":"person",
+    "sentiment":1.0,
+    "plan_type":"Proposal",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Report on travel findings and draft housing proposal suggestion",
+    "reason":"Feels committee should be doing more for blue-collar workers. Nephew is having trouble finding housing",
+    "industry":[
+      "large vessel",
+      "small vessel"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_10",
+    "entity_id":"Ed Helpsford",
+    "entity_type":"person",
+    "sentiment":1.0,
+    "plan_type":"Proposal",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Report on travel findings and draft housing proposal suggestion",
+    "reason":"Feels committee should be doing more for blue-collar workers. Nephew is having trouble finding housing",
+    "industry":[
+      "large vessel",
+      "small vessel"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_10",
+    "entity_id":"Carol Limpet",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Update on formal cost impact & environment report",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_10",
+    "entity_id":"Tante Titan",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Update on formal cost impact & environment report",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_10",
+    "entity_id":"Simone Kat",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Update on formal cost impact & environment report",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_10",
+    "entity_id":"Builders Association",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Update on formal cost impact & environment report",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_10",
+    "entity_id":"Industrial Shipping",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Update on formal cost impact & environment report",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_10",
+    "entity_id":"High Seas Fishing Inc.",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Update on formal cost impact & environment report",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_10",
+    "entity_id":"Saltwater Serenades",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Update on formal cost impact & environment report",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_10",
+    "entity_id":"Paackland Container Inc.",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Update on formal cost impact & environment report",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_10",
+    "entity_id":"Daughters of Port Grove",
+    "entity_type":"organization",
+    "sentiment":0.0,
+    "plan_type":"Discussion",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Provide historical significance for naming the customs office",
+    "reason":"Symbolic gesture with no direct impact on tourism or vessel operations.",
+    "industry":[
+
+    ]
+  },
+  {
+    "meeting_id":"Meeting_10",
+    "entity_id":"Daughters of Port Grove",
+    "entity_type":"organization",
+    "sentiment":0.0,
+    "plan_type":"Discussion",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Provide historical significance for naming the customs office",
+    "reason":"Symbolic gesture with no direct impact on tourism or vessel operations.",
+    "industry":[
+
+    ]
+  },
+  {
+    "meeting_id":"Meeting_10",
+    "entity_id":"Tours Central Ticketing",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Update on formal cost impact & environment report",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_10",
+    "entity_id":"PTA",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Update on formal cost impact & environment report",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_11",
+    "entity_id":"Seal",
+    "entity_type":"person",
+    "sentiment":0.2,
+    "plan_type":"Travel",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Travel to The Bait & Stich",
+    "reason":"Appreciates historical recognition but sees limited practical benefit.",
+    "industry":[
+
+    ]
+  },
+  {
+    "meeting_id":"Meeting_11",
+    "entity_id":"Seal",
+    "entity_type":"person",
+    "sentiment":0.2,
+    "plan_type":"Discussion",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Discuss travel plans to The Bait & Stich",
+    "reason":"Appreciates historical recognition but sees limited practical benefit.",
+    "industry":[
+
+    ]
+  },
+  {
+    "meeting_id":"Meeting_11",
+    "entity_id":"Teddy Goldstein",
+    "entity_type":"person",
+    "sentiment":-0.5,
+    "plan_type":"Report",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Update on formal cost impact & environment report",
+    "reason":"Seen as prioritizing tourism over fishing-related infrastructure.",
+    "industry":[
+      "tourism"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_11",
+    "entity_id":"Ed Helpsford",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Update on formal cost impact & environment report",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_11",
+    "entity_id":"Carol Limpet",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Update on formal cost impact & environment report",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_11",
+    "entity_id":"Tante Titan",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Update on formal cost impact & environment report",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_11",
+    "entity_id":"Simone Kat",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Update on formal cost impact & environment report",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_11",
+    "entity_id":"Builders Association",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Update on formal cost impact & environment report",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_11",
+    "entity_id":"Industrial Shipping",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Update on formal cost impact & environment report",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_11",
+    "entity_id":"High Seas Fishing Inc.",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Update on formal cost impact & environment report",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_11",
+    "entity_id":"Saltwater Serenades",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Update on formal cost impact & environment report",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_11",
+    "entity_id":"Paackland Container Inc.",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Update on formal cost impact & environment report",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_11",
+    "entity_id":"Daughters of Port Grove",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Update on formal cost impact & environment report",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_11",
+    "entity_id":"Tours Central Ticketing",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Update on formal cost impact & environment report",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_11",
+    "entity_id":"PTA",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Update on formal cost impact & environment report",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_12",
+    "entity_id":"Seal",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Proposal",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Gather public opinion on name choices and plan the dedication event",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_12",
+    "entity_id":"Teddy Goldstein",
+    "entity_type":"person",
+    "sentiment":-0.5,
+    "plan_type":"Report",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Present findings from the environmental impact study",
+    "reason":"Prefers resources to be allocated toward the fishing industry.",
+    "industry":[
+      "tourism"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_12",
+    "entity_id":"Teddy Goldstein",
+    "entity_type":"person",
+    "sentiment":-0.5,
+    "plan_type":"Report",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Present findings from the environmental impact study",
+    "reason":"Prefers resources to be allocated toward the fishing industry.",
+    "industry":[
+      "tourism"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_12",
+    "entity_id":"Ed Helpsford",
+    "entity_type":"person",
+    "sentiment":0.0,
+    "plan_type":"Proposal",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Gather public opinion on name choices and plan the dedication event",
+    "reason":"Supportive but also feels it is a distraction",
+    "industry":[
+
+    ]
+  },
+  {
+    "meeting_id":"Meeting_12",
+    "entity_id":"Ed Helpsford",
+    "entity_type":"person",
+    "sentiment":0.0,
+    "plan_type":"Proposal",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Gather public opinion on name choices and plan the dedication event",
+    "reason":"Supportive but also feels it is a distraction",
+    "industry":[
+
+    ]
+  },
+  {
+    "meeting_id":"Meeting_12",
+    "entity_id":"Carol Limpet",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Proposal",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Gather public opinion on name choices and plan the dedication event",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_12",
+    "entity_id":"Tante Titan",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Proposal",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Gather public opinion on name choices and plan the dedication event",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_12",
+    "entity_id":"Simone Kat",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Proposal",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Gather public opinion on name choices and plan the dedication event",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_12",
+    "entity_id":"Builders Association",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Proposal",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Gather public opinion on name choices and plan the dedication event",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_12",
+    "entity_id":"Industrial Shipping",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Proposal",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Gather public opinion on name choices and plan the dedication event",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_12",
+    "entity_id":"High Seas Fishing Inc.",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Proposal",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Gather public opinion on name choices and plan the dedication event",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_12",
+    "entity_id":"Saltwater Serenades",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Proposal",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Gather public opinion on name choices and plan the dedication event",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_12",
+    "entity_id":"Paackland Container Inc.",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Proposal",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Gather public opinion on name choices and plan the dedication event",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_12",
+    "entity_id":"Daughters of Port Grove",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Proposal",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Gather public opinion on name choices and plan the dedication event",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_12",
+    "entity_id":"Tours Central Ticketing",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Proposal",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Gather public opinion on name choices and plan the dedication event",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_12",
+    "entity_id":"PTA",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Proposal",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Gather public opinion on name choices and plan the dedication event",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_13",
+    "entity_id":"Seal",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":null,
+    "present":0,
+    "sentiment_source":null,
+    "long_title":null,
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_13",
+    "entity_id":"Teddy Goldstein",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":null,
+    "present":0,
+    "sentiment_source":null,
+    "long_title":null,
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_13",
+    "entity_id":"Ed Helpsford",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":null,
+    "present":0,
+    "sentiment_source":null,
+    "long_title":null,
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_13",
+    "entity_id":"Carol Limpet",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":null,
+    "present":0,
+    "sentiment_source":null,
+    "long_title":null,
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_13",
+    "entity_id":"Tante Titan",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":null,
+    "present":0,
+    "sentiment_source":null,
+    "long_title":null,
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_13",
+    "entity_id":"Simone Kat",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":null,
+    "present":0,
+    "sentiment_source":null,
+    "long_title":null,
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_13",
+    "entity_id":"Builders Association",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":null,
+    "present":0,
+    "sentiment_source":null,
+    "long_title":null,
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_13",
+    "entity_id":"Industrial Shipping",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":null,
+    "present":0,
+    "sentiment_source":null,
+    "long_title":null,
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_13",
+    "entity_id":"High Seas Fishing Inc.",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":null,
+    "present":0,
+    "sentiment_source":null,
+    "long_title":null,
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_13",
+    "entity_id":"Saltwater Serenades",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":null,
+    "present":0,
+    "sentiment_source":null,
+    "long_title":null,
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_13",
+    "entity_id":"Paackland Container Inc.",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":null,
+    "present":0,
+    "sentiment_source":null,
+    "long_title":null,
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_13",
+    "entity_id":"Daughters of Port Grove",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":null,
+    "present":0,
+    "sentiment_source":null,
+    "long_title":null,
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_13",
+    "entity_id":"Tours Central Ticketing",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":null,
+    "present":0,
+    "sentiment_source":null,
+    "long_title":null,
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_13",
+    "entity_id":"PTA",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":null,
+    "present":0,
+    "sentiment_source":null,
+    "long_title":null,
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_14",
+    "entity_id":"Seal",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":null,
+    "present":0,
+    "sentiment_source":null,
+    "long_title":null,
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_14",
+    "entity_id":"Teddy Goldstein",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":null,
+    "present":0,
+    "sentiment_source":null,
+    "long_title":null,
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_14",
+    "entity_id":"Ed Helpsford",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":null,
+    "present":0,
+    "sentiment_source":null,
+    "long_title":null,
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_14",
+    "entity_id":"Carol Limpet",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":null,
+    "present":0,
+    "sentiment_source":null,
+    "long_title":null,
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_14",
+    "entity_id":"Tante Titan",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":null,
+    "present":0,
+    "sentiment_source":null,
+    "long_title":null,
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_14",
+    "entity_id":"Simone Kat",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":null,
+    "present":0,
+    "sentiment_source":null,
+    "long_title":null,
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_14",
+    "entity_id":"Builders Association",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":null,
+    "present":0,
+    "sentiment_source":null,
+    "long_title":null,
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_14",
+    "entity_id":"Industrial Shipping",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":null,
+    "present":0,
+    "sentiment_source":null,
+    "long_title":null,
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_14",
+    "entity_id":"High Seas Fishing Inc.",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":null,
+    "present":0,
+    "sentiment_source":null,
+    "long_title":null,
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_14",
+    "entity_id":"Saltwater Serenades",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":null,
+    "present":0,
+    "sentiment_source":null,
+    "long_title":null,
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_14",
+    "entity_id":"Paackland Container Inc.",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":null,
+    "present":0,
+    "sentiment_source":null,
+    "long_title":null,
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_14",
+    "entity_id":"Daughters of Port Grove",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":null,
+    "present":0,
+    "sentiment_source":null,
+    "long_title":null,
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_14",
+    "entity_id":"Tours Central Ticketing",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":null,
+    "present":0,
+    "sentiment_source":null,
+    "long_title":null,
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_14",
+    "entity_id":"PTA",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":null,
+    "present":0,
+    "sentiment_source":null,
+    "long_title":null,
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_15",
+    "entity_id":"Seal",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":null,
+    "present":0,
+    "sentiment_source":null,
+    "long_title":null,
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_15",
+    "entity_id":"Teddy Goldstein",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":null,
+    "present":0,
+    "sentiment_source":null,
+    "long_title":null,
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_15",
+    "entity_id":"Ed Helpsford",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":null,
+    "present":0,
+    "sentiment_source":null,
+    "long_title":null,
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_15",
+    "entity_id":"Carol Limpet",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":null,
+    "present":0,
+    "sentiment_source":null,
+    "long_title":null,
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_15",
+    "entity_id":"Tante Titan",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":null,
+    "present":0,
+    "sentiment_source":null,
+    "long_title":null,
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_15",
+    "entity_id":"Simone Kat",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":null,
+    "present":0,
+    "sentiment_source":null,
+    "long_title":null,
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_15",
+    "entity_id":"Builders Association",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":null,
+    "present":0,
+    "sentiment_source":null,
+    "long_title":null,
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_15",
+    "entity_id":"Industrial Shipping",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":null,
+    "present":0,
+    "sentiment_source":null,
+    "long_title":null,
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_15",
+    "entity_id":"High Seas Fishing Inc.",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":null,
+    "present":0,
+    "sentiment_source":null,
+    "long_title":null,
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_15",
+    "entity_id":"Saltwater Serenades",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":null,
+    "present":0,
+    "sentiment_source":null,
+    "long_title":null,
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_15",
+    "entity_id":"Paackland Container Inc.",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":null,
+    "present":0,
+    "sentiment_source":null,
+    "long_title":null,
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_15",
+    "entity_id":"Daughters of Port Grove",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":null,
+    "present":0,
+    "sentiment_source":null,
+    "long_title":null,
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_15",
+    "entity_id":"Tours Central Ticketing",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":null,
+    "present":0,
+    "sentiment_source":null,
+    "long_title":null,
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_15",
+    "entity_id":"PTA",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":null,
+    "present":0,
+    "sentiment_source":null,
+    "long_title":null,
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_16",
+    "entity_id":"Seal",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Status of road closures and traffic issues for concert",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_16",
+    "entity_id":"Teddy Goldstein",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Status of road closures and traffic issues for concert",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_16",
+    "entity_id":"Ed Helpsford",
+    "entity_type":"person",
+    "sentiment":0.5,
+    "plan_type":"Report",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Status of road closures and traffic issues for concert",
+    "reason":"Believes concerts can bring community together but cautious about potential disruptions.",
+    "industry":[
+      "tourism"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_16",
+    "entity_id":"Ed Helpsford",
+    "entity_type":"person",
+    "sentiment":0.5,
+    "plan_type":"Report",
+    "present":1,
+    "sentiment_source":"direct",
+    "long_title":"Status of road closures and traffic issues for concert",
+    "reason":"Believes concerts can bring community together but cautious about potential disruptions.",
+    "industry":[
+      "tourism"
+    ]
+  },
+  {
+    "meeting_id":"Meeting_16",
+    "entity_id":"Carol Limpet",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Status of road closures and traffic issues for concert",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_16",
+    "entity_id":"Tante Titan",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Status of road closures and traffic issues for concert",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_16",
+    "entity_id":"Simone Kat",
+    "entity_type":"person",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Status of road closures and traffic issues for concert",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_16",
+    "entity_id":"Builders Association",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Status of road closures and traffic issues for concert",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_16",
+    "entity_id":"Industrial Shipping",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Status of road closures and traffic issues for concert",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_16",
+    "entity_id":"High Seas Fishing Inc.",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Status of road closures and traffic issues for concert",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_16",
+    "entity_id":"Saltwater Serenades",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Status of road closures and traffic issues for concert",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_16",
+    "entity_id":"Paackland Container Inc.",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Status of road closures and traffic issues for concert",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_16",
+    "entity_id":"Daughters of Port Grove",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Status of road closures and traffic issues for concert",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_16",
+    "entity_id":"Tours Central Ticketing",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Status of road closures and traffic issues for concert",
+    "reason":null,
+    "industry":null
+  },
+  {
+    "meeting_id":"Meeting_16",
+    "entity_id":"PTA",
+    "entity_type":"organization",
+    "sentiment":null,
+    "plan_type":"Report",
+    "present":0,
+    "sentiment_source":null,
+    "long_title":"Status of road closures and traffic issues for concert",
+    "reason":null,
+    "industry":null
+  }
+]
