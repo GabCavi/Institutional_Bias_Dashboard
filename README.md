@@ -3,7 +3,8 @@ Reconstructing Institutional Bias Through a Data-Driven Visualization Dashboard
 
 This is the repository of a thesis submitted in fulfillment of the requirements for the UU Master of Science degree in Applied Data Science. 
 
-Abstract
+**Abstract**
+
 In this thesis, we present an interactive data visualization dashboard developed to address the 2025 VAST Challenge Mini-Challenge 2, which focuses on analyzing stakeholder engagement and 
 potential bias during meetings. The data visualizations created incorporate a matrix-based representation of the data alongside with bar plots, trend lines, boxplots, and tooltip details to create
 a useful, interactive dashboard that allows any researcher to find out if there has been bias from the council members (COOTEFOO) or not. By analyzing the TROUT (tourism) and FILAH
