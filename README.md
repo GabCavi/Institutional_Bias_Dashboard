@@ -5,7 +5,7 @@ This is the repository of a thesis submitted in fulfillment of the requirements 
 
 ## Dashboard Preview
 
-![Dashboard Screenshot](./docs/Dashboard_PNG_Example.png)
+![Dashboard Screenshot](./Dashboard_PNG_Example.png)
 
 
 **Abstract**
